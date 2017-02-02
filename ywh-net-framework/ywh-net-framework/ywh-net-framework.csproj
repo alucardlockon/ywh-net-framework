@@ -38,7 +38,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -90,20 +102,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\css\bootstrap-datepicker.min.css" />
+    <Content Include="content\css\bootstrap-table.min.css" />
+    <Content Include="content\css\bootstrap-timepicker.min.css" />
+    <Content Include="content\css\bootstrap.css" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\jquery.tocify.css" />
+    <Content Include="content\css\styles\fonts\ionicons.svg" />
+    <Content Include="content\css\styles\iview.css" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\js\bootstrap-datepicker.min.js" />
+    <Content Include="content\js\bootstrap-table-zh-CN.min.js" />
+    <Content Include="content\js\bootstrap-table.min.js" />
+    <Content Include="content\js\bootstrap-timepicker.min.js" />
+    <Content Include="content\js\bootstrap.min.js" />
+    <Content Include="content\js\iview.min.js" />
+    <Content Include="content\js\jquery-ui.min.js" />
+    <Content Include="content\js\jquery.min.js" />
+    <Content Include="content\js\jquery.tocify.min.js" />
+    <Content Include="content\js\vue.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Sqls\init.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="content\css\styles\fonts\ionicons.eot" />
+    <Content Include="content\css\styles\fonts\ionicons.ttf" />
+    <Content Include="content\css\styles\fonts\ionicons.woff" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="content\tests\json\tabledata.json" />
+    <Content Include="content\tests\json\tabledata2.json" />
+    <Content Include="Views\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,8 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Main\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
