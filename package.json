@@ -1,0 +1,19 @@
+{
+  "name": "ywh-net-framework",
+  "version": "1.0.0",
+  "description": "an asp.net web fullstack framework\r 个人搭建的一个asp.net网页框架。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alucardlockon/ywh-net-framework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alucardlockon/ywh-net-framework/issues"
+  },
+  "homepage": "https://github.com/alucardlockon/ywh-net-framework#readme"
+}
