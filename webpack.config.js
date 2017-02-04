@@ -25,11 +25,12 @@ module.exports = {
           presets: ['es2015']
         }
       },
+      /*
       {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'ts-loader'
-      },
+      },*/
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!postcss-loader' })
