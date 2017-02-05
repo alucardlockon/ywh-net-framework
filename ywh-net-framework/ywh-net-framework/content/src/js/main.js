@@ -1,6 +1,15 @@
 var css = require('../less/less.less')
     //var ts = require('../ts/ts.ts')
 import A from '../ts/ts';
+import Vue from 'vue'
+/*
+import App from '../vue/app.vue'
+
+new Vue({
+  el: 'body',
+  components:{App}
+})
+*/
 
 class Vehicle {
     constructor(make, year) {
@@ -23,7 +32,7 @@ class Vehicle {
 
 var vehicle = new Vehicle('Toyota Corolla', 12009)
 
-document.write(new A().c)
+// document.write(new A().c)
 
 let title = document.createElement('div')
 title.textContent  = 'Hello'

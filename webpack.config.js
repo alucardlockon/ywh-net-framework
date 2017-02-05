@@ -9,7 +9,9 @@ const projDir = __dirname + '/ywh-net-framework/ywh-net-framework/content';
 module.exports = {
   //devtool选项:source-map,cheap-module-source-map,eval-source-map,cheap-module-eval-source-map
   devtool: 'eval-source-map', 
-  entry: projDir + "/src/js/main.js",
+  entry: {
+    main: projDir + "/src/js/main.js"
+  },
   output: {
     path: projDir + "/build/js",
     filename: "framework-main.js"
@@ -32,6 +34,11 @@ module.exports = {
         loader: 'ts-loader'
       },*/
       {
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: 'vue-loader'
+      },
+      {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!postcss-loader' })
       },
@@ -48,6 +55,7 @@ module.exports = {
       template: projDir+"/src/index.html"
     }),
     new webpack.optimize.UglifyJsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin("[name]-[hash].css"),
     new webpack.LoaderOptionsPlugin({
       options: {
