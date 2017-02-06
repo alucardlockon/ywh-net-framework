@@ -1,15 +1,24 @@
 var css = require('../less/less.less')
     //var ts = require('../ts/ts.ts')
+var jQuery = require('jquery')
+var bs = require('bootstrap')
 import A from '../ts/ts';
-import Vue from 'vue'
-/*
-import App from '../vue/app.vue'
+//import Vue from 'vue'
+//import Hello from '../vue/app.vue'
+//import Hello from '../vue/components/Hello.vue'
 
-new Vue({
-  el: 'body',
-  components:{App}
+/*
+var vm=new Vue({
+  el: '#app',
+  data: function() {
+    return {
+      msg: 'Hello from vue-loader,' + new Date().toLocaleString()
+    }
+  },
+  //components:{Hello}
 })
 */
+
 
 class Vehicle {
     constructor(make, year) {
@@ -44,3 +53,4 @@ document.body.appendChild(button)
 setInterval(() => {
     title.textContent  = new Date().toLocaleString()
 }, 1000)
+

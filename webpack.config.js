@@ -57,6 +57,10 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new ExtractTextPlugin("[name]-[hash].css"),
+    new webpack.ProvidePlugin({
+       $: 'jquery',
+       jQuery: 'jquery',
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         //postcss调用添加前缀

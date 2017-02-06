@@ -1,14 +1,13 @@
-<template id="template">
+<template>
   <div class="message">{{msg}}</div>    
 </template>
 <script>
 export default {
   data: function() {
     return {
-      msg: 'Hello from vue-loader'
+      msg: 'Hello from vue-loader,' + new Date()
     }
-  },
-  template: '#template'
+  }
 }
 </script>
 <style>
