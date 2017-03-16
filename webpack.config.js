@@ -8,7 +8,7 @@ const projDir = __dirname + '/ywh-net-framework/ywh-net-framework/content';
 
 module.exports = {
   //devtool选项:source-map,cheap-module-source-map,eval-source-map,cheap-module-eval-source-map
-  devtool: 'eval-source-map', 
+  //devtool: 'eval-source-map', 
   entry: {
     main: projDir + "/src/js/main.js"
   },
@@ -45,7 +45,12 @@ module.exports = {
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!less-loader!postcss-loader' })
-      }
+      },
+      {test: /\.scss$/, loaders:['style','css','sass']},
+      {test: /\.(png|jpe?g|ico|bmp|gif)$/,loader: 'file?&limit=10000name=/img/[name].[ext]?[hash]'},  
+      {test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/ ,loader : 'file?limit=10000&mimetype=application/font-woff&name=/font/[name]-[hash:8].[ext]'},  
+      {test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/, loader : 'file?name=/font/[name]-[hash:8].[ext]'}  
+
     ]
   },
   

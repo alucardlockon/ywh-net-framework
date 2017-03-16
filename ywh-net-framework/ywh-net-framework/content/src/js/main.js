@@ -1,6 +1,7 @@
 var css = require('../less/less.less')
     //var ts = require('../ts/ts.ts')
-var bs = require('bootstrap-loader')
+// var bs = require('bootstrap-loader')
+var bs = require('../css/bootstrap.css')
 import A from '../ts/ts';
 //import Vue from 'vue'
 //import Hello from '../vue/app.vue'
